@@ -1,0 +1,54 @@
+/* Dark theme: navy palette matching the FxMyAdmin poster. Loaded after app.css. */
+.root {
+    -fx-base: #232b3d;
+    -fx-background: #131a27;
+    -fx-control-inner-background: #182032;
+    -fx-control-inner-background-alt: #1c2539;
+    -fx-dark-text-color: #0b1020;
+    -fx-mid-text-color: #c9d1e0;
+    -fx-light-text-color: #eef2f8;
+    -fx-box-border: #0b0f18;
+    -fx-text-box-border: #2c3750;
+    -fx-outer-border: #2c3750;
+    -fx-selection-bar-non-focused: #2a3754;
+    -fx-faint-focus-color: #2d8cff33;
+
+    -jma-accent: #2d8cff;
+    -jma-muted: #8b96ad;
+    -jma-db-text: #7fb6ff;
+    -jma-pk: #f2c14e;
+    -jma-danger: #ff6b5e;
+    -jma-bar: #0f1520;
+    -jma-border: #232c40;
+    -jma-card: #111827;
+}
+
+.menu-bar { -fx-background-color: #0f1520; }
+.menu-bar .menu > .label { -fx-text-fill: #dfe5f0; }
+.context-menu { -fx-background-color: #1c2539; }
+
+.table-view .column-header-background,
+.table-view .column-header,
+.table-view .filler { -fx-background-color: #1c2539; }
+.table-view .column-header { -fx-border-color: transparent #2c3750 transparent transparent; }
+.table-view .column-header .label { -fx-text-fill: #dfe5f0; }
+.table-view, .tree-view, .list-view { -fx-background-color: #2c3750, -fx-control-inner-background; }
+
+.split-pane { -fx-background-color: #131a27; }
+.split-pane > .split-pane-divider { -fx-background-color: #232c40; -fx-padding: 0 1 0 1; }
+
+.tab-pane > .tab-header-area > .tab-header-background { -fx-background-color: #0f1520; }
+
+.dialog-pane { -fx-background-color: #131a27; }
+.dialog-pane > .header-panel { -fx-background-color: #1c2539; }
+.dialog-pane > .button-bar > .container { -fx-background-color: #131a27; }
+
+.login-error { -fx-background-color: rgba(255, 107, 94, 0.13); }
+.login-bg {
+    -fx-background-color:
+        radial-gradient(center 50% 0%, radius 80%, #1b3a6e 0%, transparent 100%),
+        #0b1020;
+}
+.login-card { -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.5), 36, 0.1, 0, 10); }
+
+.tooltip { -fx-background-color: #2a3550; -fx-text-fill: #eef2f8; }

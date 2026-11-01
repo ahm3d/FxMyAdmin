@@ -1,0 +1,126 @@
+/* Shared styles. Colors are variables so dark.css can override them. */
+.root {
+    -fx-font-size: 13px;
+    -jma-accent: #1a73e8;
+    -jma-muted: #6b7385;
+    -jma-db-text: #1a5bb5;
+    -jma-pk: #b07d00;
+    -jma-danger: #d93025;
+    -jma-bar: derive(-fx-background, -5%);
+    -jma-border: derive(-fx-background, -14%);
+    -jma-card: -fx-background;
+    -fx-accent: -jma-accent;
+    -fx-focus-color: -jma-accent;
+    -fx-faint-focus-color: #1a73e822;
+}
+
+/* ---------- main window ---------- */
+.toolbar {
+    -fx-background-color: -jma-bar;
+    -fx-border-color: transparent transparent -jma-border transparent;
+}
+
+.breadcrumb {
+    -fx-padding: 8 12 8 12;
+    -fx-font-weight: bold;
+    -fx-text-fill: white;
+    -fx-background-color: linear-gradient(to right, #1556b8, -jma-accent);
+    -fx-max-width: infinity;
+}
+
+.status-bar {
+    -fx-background-color: -jma-bar;
+    -fx-border-color: -jma-border transparent transparent transparent;
+}
+.status-bar .label { -fx-text-fill: -jma-muted; }
+
+.section-title {
+    -fx-font-size: 18px;
+    -fx-font-weight: bold;
+}
+
+.code, .code .content {
+    -fx-font-family: "Monospace", "DejaVu Sans Mono", monospace;
+    -fx-font-size: 13px;
+}
+
+.button.primary { -fx-base: -jma-accent; -fx-text-fill: white; }
+.button.danger  { -fx-base: -jma-danger; -fx-text-fill: white; }
+
+.null-cell { -fx-text-fill: -jma-muted; -fx-font-style: italic; }
+.table-row-cell:selected .null-cell { -fx-text-fill: derive(white, -20%); }
+
+.query-result { -fx-font-weight: bold; }
+.query-result.error { -fx-text-fill: -jma-danger; }
+
+.field-name-pk { -fx-font-weight: bold; -fx-text-fill: -jma-pk; }
+.field-name { -fx-font-weight: bold; }
+.field-type { -fx-text-fill: -jma-muted; }
+
+.node-server { -fx-font-weight: bold; }
+.node-db { -fx-text-fill: -jma-db-text; }
+.node-view { -fx-font-style: italic; }
+.node-loading { -fx-text-fill: -jma-muted; }
+.tree-cell:selected.node-db,
+.tree-cell:selected.node-view,
+.tree-cell:selected.node-loading { -fx-text-fill: white; }
+
+.app-subtitle { -fx-text-fill: -jma-muted; }
+
+/* ---------- loading screen ---------- */
+.splash { -fx-background-color: #0b1020; }
+.splash-band {
+    -fx-padding: 40 26 20 26;
+    -fx-background-color: linear-gradient(to bottom, transparent, rgba(5, 9, 20, 0.92));
+}
+.splash-band .label { -fx-text-fill: white; -fx-font-size: 14px; }
+.splash-band .progress-bar { -fx-accent: #2d8cff; }
+.splash-band .progress-bar > .track { -fx-background-color: rgba(255, 255, 255, 0.15); -fx-background-radius: 4; }
+
+/* ---------- connect page ---------- */
+.login-bg {
+    -fx-background-color:
+        radial-gradient(center 50% 0%, radius 75%, derive(-jma-accent, 70%) 0%, transparent 100%),
+        derive(-fx-background, -4%);
+}
+
+.login-card {
+    -fx-background-color: -jma-card;
+    -fx-background-radius: 14;
+    -fx-border-color: -jma-border;
+    -fx-border-radius: 14;
+    -fx-effect: dropshadow(gaussian, rgba(10, 20, 40, 0.18), 30, 0.1, 0, 8);
+}
+.card-separator { -fx-background-color: -jma-border; }
+
+.title-fx   { -fx-font-size: 26px; -fx-font-weight: bold; -fx-fill: #1a8cff; }
+.title-rest { -fx-font-size: 26px; -fx-font-weight: bold; -fx-fill: -fx-text-background-color; }
+
+.login-heading { -fx-font-size: 17px; -fx-font-weight: bold; }
+.form-label { -fx-text-fill: -jma-muted; -fx-font-size: 12px; -fx-font-weight: bold; }
+.login-card .text-field, .login-card .spinner { -fx-font-size: 14px; }
+.login-card .text-field { -fx-padding: 7 9; }
+
+.login-error {
+    -fx-text-fill: -jma-danger;
+    -fx-background-color: derive(-jma-danger, 85%);
+    -fx-background-radius: 6;
+    -fx-padding: 8 10;
+}
+
+.big-button { -fx-font-size: 14px; -fx-font-weight: bold; -fx-padding: 9 16; }
+
+.icon-button {
+    -fx-font-size: 16px;
+    -fx-background-radius: 20;
+    -fx-min-width: 36;
+    -fx-min-height: 36;
+    -fx-padding: 0;
+}
+
+.link-button {
+    -fx-background-color: transparent;
+    -fx-text-fill: -jma-muted;
+    -fx-underline: false;
+}
+.link-button:hover { -fx-text-fill: -jma-accent; -fx-underline: true; }
